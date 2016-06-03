@@ -8,11 +8,20 @@
       body {
         font-family: "Heveltica", sans-serif;
         text-align: center;
+        font-size: 1em;
       }
       table {
         border: 1px solid gray;
         text-align: center;
-        margin-left: 45%;
+        margin-left: 44%;
+      }
+      label {
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid gray;
+      }
+      button {
+        font-size: 2em;
       }
 
     </style>
@@ -25,7 +34,7 @@
       $scope.playRock = function() {
         var computerPlay = computerTurn();
         if(computerPlay === "rock") {
-          $scope.message = "It's a tie";
+          $scope.message = "It's a tie!";
         } else if (computerPlay === "scissors") {
           $scope.message = "You Win!";
           $scope.playerScore++;
@@ -84,10 +93,8 @@
     <br>
     <p>{{message}}</p>
     <br>
+    <label>Score</label>
     <table>
-      <th>
-        Score:
-      </th>
       <tr>
       <td>You</td>
       <td>Computer</td>
